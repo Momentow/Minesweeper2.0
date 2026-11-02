@@ -1,0 +1,20 @@
+[workspace]
+resolver = "3"
+members = ["core", "frontends/*"]
+default-members = ["core"]          # plain `cargo build`/`test` = core only
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.99"
+license = "MIT"
+repository = "https://github.com/Momentow/Minesweeper2.0"
+
+[workspace.dependencies]
+minesweeper-core = { path = "core" }
+bevy = "0.20.1"
+
+# Bevy's recommended dev setup: optimize dependencies, keep own code quick to compile
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 3

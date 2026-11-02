@@ -1,0 +1,11 @@
+[package]
+name = "minesweeper-core"
+version = "0.1.0"
+description = "Engine-agnostic Minesweeper core: rules, generators, solvers"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false        # remove when you actually publish
+
+[dependencies]         # nothing graphical, ever
